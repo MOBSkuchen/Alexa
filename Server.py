@@ -63,7 +63,7 @@ def ref_audio(auth, name):
             print('ERROR')
 serversocket = socket.socket(
     socket.AF_INET, socket.SOCK_STREAM)
-host = "192.168.2.120"
+host = "IP"
 print(host)
 port = 54833
 serversocket.bind((host, port))
