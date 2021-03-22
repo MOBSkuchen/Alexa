@@ -49,7 +49,7 @@ print('Finished recording')
 
 def get_res(auth):
     s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-    host = "192.168.2.120"
+    host = "IP"
     port = 54833
     s.connect((host, port))
     get_random_str(5)
@@ -72,7 +72,7 @@ def get_res(auth):
         print("ERROR")
     s.close()
 s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-host = "192.168.2.120"
+host = "IP"
 port = 54833
 s.connect((host, port))
 def get_random_str(length):
