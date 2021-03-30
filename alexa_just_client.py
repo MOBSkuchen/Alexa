@@ -1,13 +1,13 @@
 import random
 import smtplib
 import time
-
+#This is in German lol
 import speech_recognition as sr
 import keyboard
 import webbrowser
 global bungee, wkey
 bungee = str("on")
-wkey = "105082a28977bbd208954674319849c2"
+wkey = "API_KEY"
 import requests, json
 def get_contact(contact_id, to_get):
     with open("contact_" + contact_id + ".alexa", "r+") as file:
@@ -23,11 +23,10 @@ def sendmail(subject, msg_, receiver):
     msg = msg + "Subject: " + subject + "\n"
     msg = msg + "To: " + receiver + "\n\n"
     msg = msg + msg_ + "\n"
-    msg = msg + "Diese Mail ist von Suprime ueberprueft und gesendet worden." + "\n"
     msg = msg + "   \n"
     print(msg)
-    server = smtplib.SMTP_SSL('smtp.ionos.de', 465)
-    server.login("Jasper.Rien@am-pappelsee.de", "Katja!Mobs5")
+    server = smtplib.SMTP_SSL(PROVIDER)
+    server.login(DATA)
     server.sendmail(
         "Sendmail@gmail.com",
         receiver,
